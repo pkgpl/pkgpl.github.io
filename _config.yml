@@ -14,3 +14,6 @@ markdown: kramdown
 
 # Google analytics
 google_analytics: UA-85000918-1
+
+# Disqus post comments
+disqus_shortname: pkgpl
