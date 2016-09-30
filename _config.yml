@@ -11,3 +11,6 @@ github_username:  pkgpl
 
 # Build settings
 markdown: kramdown
+
+# Google analytics
+google_analytics: UA-85000918-1
