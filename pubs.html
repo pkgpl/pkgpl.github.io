@@ -1,0 +1,18 @@
+---
+layout: page
+title: Publications
+permalink: /pub/
+nav-order: 12
+---
+
+<div class="publications">
+<ul class="pub-list">
+{% assign ordered_pubs = site.publications | sort: "display-order" %}
+{% for pub in ordered_pubs %}
+  <li>
+          <a class="pub-link" href="{{ pub.url | prepend: site.baseurl }}">{{ pub.title }}</a>
+  </li>
+{% endfor %}
+</ul>
+</div>
+

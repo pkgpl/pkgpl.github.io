@@ -8,12 +8,21 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://pkgpl.github.io" # the base hostname & protocol for your site
 twitter_username: 
 github_username:  pkgpl
+encoding: utf-8
 
 # Build settings
 markdown: kramdown
+#highlighter: pygments
 
 # Google analytics
 google_analytics: UA-85000918-1
 
 # Disqus post comments
 disqus_shortname: pkgpl
+
+# Collctions
+collections:
+  publications:
+    output: true
+    permalink: /publications/:path/
+
