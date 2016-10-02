@@ -36,6 +36,7 @@ end
 ```
 <p>과 같이 사용하여 <code>f77 -o name prereq1 prereq2</code>와 같은 결과를 얻을 수도 있습니다.</p>
 그럼 [앞에서 만들었던 Makefile]({% post_url 2014-07-12-makefile_basic %})과 같은 기능을 하는 Rakefile을 만들어 비교해 보겠습니다. 앞에서 만들었던 Makefile은 다음과 같고,
+
 ```make
 # target: dependency list
 # [tab] command
@@ -54,7 +55,9 @@ sub2.o: sub2.f
 clean:
     rm main main.o sub1.o sub2.o
 ```
+
 <p>이에 해당하는 Rakefile은 다음과 같습니다.</p>
+
 ```ruby
 f90='gfortran'
 
