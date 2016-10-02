@@ -4,6 +4,18 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">PKGPL</h1>
+  <h1 class="page-heading">최근글</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts offset:0 limit:5 %}
+      <li>
+	  <a class="post-link-main" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>&nbsp&nbsp<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+	  {{ post.excerpt }}
+<a href="{{ post.url | prepend: site.baseurl }}">...</a>
+
+
+      </li>
+    {% endfor %}
+  </ul>
 
 </div>

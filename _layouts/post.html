@@ -2,30 +2,15 @@
 layout: default
 ---
 <div class="post">
-	<script type="text/x-mathjax-config">
-		MathJax.Hub.Config({
-			extensions: ["tex2jax.js"],
-			jax: ["input/TeX", "output/HTML-CSS"],
-			tex2jax: {
-				inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-				displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-				processEscapes: true
-			},
-			"HTML-CSS": { availableFonts: ["TeX"] }
-		});
-	</script>
-	<script type="text/javascript"
-		src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-	</script>
-
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+    <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.tags %} • Tags: {% for tag in page.tags %}<a href="{{ site.baseurl }}/tags/#{{tag|slugize}}">{{tag}}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}{% endif %}</p>
   </header>
 
   <article class="post-content">
     {{ content }}
   </article>
+
 {% if site.disqus_shortname %}
   {% include disqus_comments.html %}
 {% endif %}

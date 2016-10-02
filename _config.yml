@@ -26,3 +26,11 @@ collections:
     output: true
     permalink: /publications/:path/
 
+# Default values
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "post"
+
