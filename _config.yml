@@ -25,6 +25,9 @@ collections:
   publications:
     output: true
     permalink: /publications/:path/
+  classes:
+    output: true
+    permalink: /classes/:path/
 
 # Default values
 defaults:
