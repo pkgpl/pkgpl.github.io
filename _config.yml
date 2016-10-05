@@ -1,9 +1,8 @@
 # Site settings
-title: PKGPL
+title: +Ha
 email: wansooha@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Geophysical Prospecting Lab.<br>
-  Pukyong National University
+  Soli Deo Gloria
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://pkgpl.github.io" # the base hostname & protocol for your site
 twitter_username: 
@@ -21,13 +20,13 @@ google_analytics: UA-85000918-1
 disqus_shortname: pkgpl
 
 # Collctions
-collections:
-  publications:
-    output: true
-    permalink: /publications/:path/
-  classes:
-    output: true
-    permalink: /classes/:path/
+#collections:
+#  publications:
+#    output: true
+#    permalink: /publications/:path/
+#  classes:
+#    output: true
+#    permalink: /classes/:path/
 
 # Default values
 defaults:
