@@ -7,7 +7,7 @@ published: true
 status: publish
 categories: []
 tags:
-- Fortran
+- fortran
 - gpl
 ---
 [gpl]({% post_url 2014-07-26-geophysical-prospecting-library %})에서 사용하기 위해 개발한 포트란 option parser를 소개합니다. Option parser는 command line option들을 분석해서 프로그램에서 사용할 수 있도록 변수로 저장해주는 역할을 합니다. 리눅스나 맥에서 명령을 실행할 때

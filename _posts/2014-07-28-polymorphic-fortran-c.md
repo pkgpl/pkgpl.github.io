@@ -7,11 +7,12 @@ published: true
 status: publish
 categories: []
 tags:
-- C
-- Fortran
+- c
+- fortran
 - gpl
-- OOP
-- Python
+- oop
+- python
+- automation
 ---
 <h1>포트란 함수 오버로딩과 중복</h1>
 앞서 [포트란 함수 오버로딩에 관한 글]({% post_url 2014-07-12-fortran_function_overloading %})을 올렸습니다. 포트란 모듈과 인터페이스를 이용하면 서로 다른 자료형을 인자로 받는 함수나 서브루틴이라도 같은 이름으로 사용할 수가 있었습니다. 그런데, 동적 자료형을 지원하는 언어와 달리, 포트란에서는 자료형별로 서브루틴들을 따로 만든 후에 같은 이름으로 호출하였습니다. 동적 자료형 언어에서는 함수 자체를 한 번만 작성하면 되지요. 여기에서 포트란 코드 작성에 중복이 발생하게 됩니다. 이러한 중복을 제거하기 위해 파이썬으로 만든 스크립트가 polyfc (Polymorphic Fortran &amp; C)입니다. 예전에 <a href="https://github.com/drewmccormack/forpedo">Forpedo</a>에서 아이디어를 얻었는데, Forpedo를 사용하려니 좀 복잡해서 Python 연습도 할 겸 [gpl]({% post_url 2014-07-26-geophysical-prospecting-library %})용으로 만들었습니다.

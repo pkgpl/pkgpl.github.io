@@ -7,8 +7,8 @@ published: true
 status: publish
 categories: []
 tags:
-- Rakefile
-- Ruby
+- rakefile
+- ruby
 ---
 <h1>Rakefile 기본 사용법</h1>
 Rakefile은 [Makefile]({% post_url 2014-07-12-makefile_basic %})과 비슷한 역할을 하는, Ruby script입니다. 따라서 Ruby라는 언어의 강력한 기능들을 그대로 가져다 쓸 수 있다는 장점이 있습니다. 단, Ruby를 알아야 제대로 사용할 수 있겠죠. Makefile을 <code>make</code>라는 명령어로 실행하듯이, Rakefile은 <code>rake</code>라는 명령어로 실행합니다. Rakefile 작성법을 Makefile 작성법과 비교하며 살펴보도록 하겠습니다. Makefile의 기본적인 작성법은

@@ -7,8 +7,8 @@ published: true
 status: publish
 categories: []
 tags:
-- Python
-- SConstruct
+- python
+- sconstruct
 ---
 SConstruct는 [Makefile]({% post_url 2014-07-12-makefile_basic %})과 비슷한 역할을 하는, Python script입니다. 따라서 Python이라는 언어의 강력한 기능들을 그대로 가져다 쓸 수 있다는 장점이 있습니다. Makefile을 make라는 명령어로 실행하듯이, SConstruct는 scons라는 명령어로 실행합니다. SConstruct file의 작성법은 [Makefile]({% post_url 2014-07-12-makefile_basic %})이나 [Rakefile]({% post_url 2014-07-26-rakefile_basic %})의 작성법과는 차이가 있습니다. 작성법을 살펴보기 전에 먼저 ‘Environment’와 ‘Builder’라는 개념에 대해 살펴보겠습니다.</p>
 <h1>Environments</h1>

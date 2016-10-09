@@ -33,6 +33,7 @@ else:
     tpl=codedir+"jekyll_noyml.tpl"
 
 run("jupyter nbconvert --to markdown {0:s} --config {1:s} --template={2:s} --output={3:s}".format(f,configpy,tpl,nbname))
+run("python {0:s}markdown_imgcopy.py {1:s} {2:s}".format(codedir,md,md))
 run("python {0:s}markdown_eqnos.py < {1:s} > ../_posts/{1:s}".format(codedir,md))
 os.remove(md)
 

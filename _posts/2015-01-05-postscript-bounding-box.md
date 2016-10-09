@@ -9,7 +9,7 @@ categories: []
 tags:
 - gpl
 - postscript
-- Python
+- python
 ---
 SU(Seismic Un*x)에 있는 psimage로 Marmousi 속도모델을 그리면 다음과 같습니다.(그림 겉부분의 회색은 그림에 포함되어 있지 않은 부분으로, 경계를 표시하기 위해 넣었습니다.)
 

@@ -7,7 +7,7 @@ published: true
 status: publish
 categories: []
 tags:
-- Makefile
+- makefile
 ---
 <p>Makefile의 기초적인 사용법을 알아봅시다.</p>
 <h1>Makefile이 필요한 경우</h1>

@@ -7,8 +7,8 @@ published: true
 status: publish
 categories: []
 tags:
-- Fortran
-- OOP
+- fortran
+- oop
 ---
 [함수 오버로딩]({% post_url 2014-07-12-fortran_function_overloading %})과 마찬가지로, <a href="http://ko.wikipedia.org/wiki/연산자_오버로딩">연산자 오버로딩도</a> 객체지향 프로그래밍의 다형성과 관련된 개념입니다. 포트란 90에서 연산자 오버로딩을 사용하는 방법을 살펴보겠습니다. 아래 코드는 이차원 좌표 자료형과 두 개의 점을 더하는 함수 예제입니다.
 

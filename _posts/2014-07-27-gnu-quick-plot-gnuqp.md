@@ -7,9 +7,10 @@ published: true
 status: publish
 categories: []
 tags:
-- Gnuplot
+- gnuplot
 - gpl
-- Python
+- python
+- automation
 ---
 <p><a href="http://www.gnuplot.info" target="_blank">Gnuplot</a>은 리눅스에서 텍스트파일에 저장된 값을 빠르게 그림으로 그려주는 프로그램입니다. 다양한 기능을 가지고 있지만, 제 경우에는 주로 수치해석 후 결과 확인용으로 씁니다.<br />
 gnuplot으로 그림을 그릴 때에는 command line 상에서 <code>gnuplot</code>이라고 치고 들어가서 gnuplot 명령어들을 이용하여 그림을 그리고 <code>q</code>를 입력하여 빠져나옵니다.<br />
