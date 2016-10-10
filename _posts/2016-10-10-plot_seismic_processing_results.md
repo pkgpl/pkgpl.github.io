@@ -112,7 +112,7 @@ plot.migration("mig.png",vel,opt)
 plot.contour("contour.png",vel,opt)
 
 seismo="marm3000.su"
-opt2="f2=0 d2=0.025"
+opt2="f2=0 d2=0.025 d1s=0.5 d2s=0.5"
 plot.seismogram("seismo.png",seismo,opt2)
 
 spec="marm3000fx.su"
