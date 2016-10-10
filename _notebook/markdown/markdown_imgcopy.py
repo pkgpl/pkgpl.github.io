@@ -11,9 +11,9 @@ if len(sys.argv) < 3:
     sys.exit(1)
 
 mdname=sys.argv[1]
-fout=sys.argv[2]
+mdout=sys.argv[2]
 print("processing "+mdname)
-mdbase=os.path.splitext(os.path.basename(mdname))[0]
+mdbase=os.path.splitext(os.path.split(mdout)[1])[0]
 
 f=open(mdname,'r')
 md=f.read()
@@ -22,12 +22,14 @@ f.close()
 imgs=re.findall('!\[.*?\]\(.+?\)',md)
 for img in imgs:
     imgname=re.search('\((.+)\)',img).group(1)
-    imgcopy=imgdir+'/'+mdbase+'-'+imgname
-    imgjk=imgdirjk+'/'+mdbase+'-'+imgname
+    imgbase=os.path.split(imgname)[1]
+    imgcopy=imgdir+'/'+mdbase+'-'+imgbase
+    imgjk=imgdirjk+'/'+mdbase+'-'+imgbase
     print(imgname+" => "+imgcopy)
     md=re.sub('\]\('+imgname+'\)',']('+imgjk+')',md)
     shutil.copy2(imgname,imgcopy)
+    os.remove(imgname)
 
-f=open(fout,'w')
+f=open(mdout,'w')
 f.write(md)
 f.close()
