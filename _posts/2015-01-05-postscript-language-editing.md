@@ -8,6 +8,7 @@ status: publish
 categories: []
 tags:
 - postscript
+- plot
 ---
 Postscript로 만들어진 .ps 또는 .eps 파일은 [앞의 글]({% post_url 2015-01-05-postscript-bounding-box %})에서 보셨던 것처럼, 일반적인 text 편집기로 편집할 수 있는 ascii 파일입니다. 파일의 내용은 출력물을 만들어내는 postscript 언어죠. 따라서 postscript 언어를 알면 eps 그림 파일도 마음대로 편집할 수 있습니다. Postscript language를 배우고 싶으신 분은 <a href="http://www.adobe.com/products/postscript/" target="_blank">Adobe site</a>에 가셔서 <a href="http://partners.adobe.com/public/developer/en/ps/sdk/sample/BlueBook.zip">매뉴얼</a>을 받아보시면 됩니다. 여기서는 [앞의 글]({% post_url 2015-01-05-postscript-bounding-box %})에서 만들었던 파일에서 legend unit의 위치를 바꾸는 법만 살펴보도록 하겠습니다. 앞에서 보았던 그림은 다음과 같습니다.
 <p><img class="size-full wp-image-119" title="eps_bbox_after" src="{{ site.baseurl }}/assets/eps_bbox_after.jpg" alt="before editing" width="435" height="176" /> before editing</p>

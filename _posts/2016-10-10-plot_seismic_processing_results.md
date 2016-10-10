@@ -9,6 +9,7 @@ tags:
 - python
 - gpl
 - automation
+- plot
 --- 
 탄성파 자료처리 결과 그림을 쉽게 그리는 방법을 살펴보겠습니다.
 

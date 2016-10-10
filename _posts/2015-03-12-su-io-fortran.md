@@ -9,6 +9,7 @@ categories: []
 tags:
 - fortran
 - su
+- seismic
 ---
 <p>포트란 사용자들이 Seismic Un*x의 SU 파일을 읽고, 수정하고, 쓸 수 있도록 하는 입출력 라이브러리를 작성하여 공개하였습니다.</p>
 <p><a href="https://github.com/pkgpl/SUIO">Github</a>에서 받으실 수 있습니다.</p>

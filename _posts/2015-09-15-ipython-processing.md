@@ -7,6 +7,7 @@ published: true
 status: publish
 categories: []
 tags:
+- seismic
 - data processing
 - python
 ---
