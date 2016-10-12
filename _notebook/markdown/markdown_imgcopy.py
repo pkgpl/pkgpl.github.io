@@ -14,6 +14,7 @@ mdname=sys.argv[1]
 mdout=sys.argv[2]
 print("processing "+mdname)
 mdbase=os.path.splitext(os.path.split(mdout)[1])[0]
+filesdir=mdbase+'_files'
 
 f=open(mdname,'r')
 md=f.read()
@@ -21,14 +22,19 @@ f.close()
 
 imgs=re.findall('!\[.*?\]\(.+?\)',md)
 for img in imgs:
-    imgname=re.search('\((.+)\)',img).group(1)
-    imgbase=os.path.split(imgname)[1]
-    imgcopy=imgdir+'/'+mdbase+'-'+imgbase
-    imgjk=imgdirjk+'/'+mdbase+'-'+imgbase
-    print(imgname+" => "+imgcopy)
-    md=re.sub('\]\('+imgname+'\)',']('+imgjk+')',md)
-    shutil.copy2(imgname,imgcopy)
-    os.remove(imgname)
+    imgpath=re.search('\((.+)\)',img).group(1)
+    imgname=os.path.split(imgpath)[1]
+    if imgname.startswith(mdbase):
+        imgcopy=imgdir+imgname
+        imgjk=imgdirjk+imgname
+    else:
+        imgcopy=imgdir+mdbase+'-'+imgname
+        imgjk=imgdirjk+mdbase+'-'+imgname
+    print(imgpath+" => "+imgcopy)
+
+    md=re.sub('\]\('+imgpath+'\)',']('+imgjk+')',md)
+    shutil.copy2(imgpath,imgcopy)
+    os.remove(imgpath)
 
 f=open(mdout,'w')
 f.write(md)
