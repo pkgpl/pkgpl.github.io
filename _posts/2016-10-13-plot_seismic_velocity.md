@@ -4,6 +4,7 @@ date: 2016-10-13
 title: 속도모델 그림 그리기
 tags: 
 - gpl
+- python
 - matplotlib
 - plot
 - seismic

@@ -14,3 +14,9 @@ nav-order: 1
 학교에서 학생들을 가르치고 있습니다. 사람들에게 조금이나마 도움이 되고자 블로그를 만들었습니다.
 
 댓글 시스템은 설치하지 않았습니다. 블로그 글 내용 오류 또는 질문 등이 있을 경우 tobelight 지메일로 메일 보내주시면 감사하겠습니다.
+
+
+
+13 Let me tell you why you are here. You’re here to be salt-seasoning that brings out the God-flavors of this earth. If you lose your saltiness, how will people taste godliness? You’ve lost your usefulness and will end up in the garbage. 14-16 Here’s another way to put it: You’re here **to be light**, bringing out the God-colors in the world. God is not a secret to be kept. We’re going public with this, as public as a city on a hill. If I make you light-bearers, you don’t think I’m going to hide you under a bucket, do you? I’m putting you on a light stand. Now that I’ve put you there on a hilltop, on a light stand—shine! Keep open house; be generous with your lives. By opening up to others, you’ll prompt people to open up with God, this generous Father in heaven.
+
+// Matthew 5, The Message (MSG)
