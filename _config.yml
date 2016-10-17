@@ -16,6 +16,10 @@ markdown: kramdown
 # Google analytics
 google_analytics: UA-85000918-1
 
+# gems
+gems:
+  - jekyll-seo-tag
+
 # Disqus post comments
 disqus_shortname: pkgpl
 
