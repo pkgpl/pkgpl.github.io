@@ -18,19 +18,19 @@ Target: Dependency list
 ```
 <p>였죠. Rakefile도 유사합니다. 단, Ruby syntax를 사용하죠. 기본적인 작성법은 다음과 같습니다.</p>
 ```ruby
-task :name = [:prereq1, :prereq2] do
+task :name => [:prereq1, :prereq2] do
     Command
 end
 ```
 <p>Makefile에서 Target에 해당하는 것이 Rakefile의 task입니다. 잘 살펴보면 task라는 함수명과 Hash, Block 두 개의 argument로 이루어진 구조라는 것을 알 수 있습니다. Hash의 key는 target이 되고 value는 prerequisites (dependency list)가 됩니다. Block은 실행해야 할 명령들로 이루어집니다. 특별히 compile하는 경우와 같이 파일을 작성하는 task의 경우에는</p>
 ```ruby
-file "name" = ["prereq1", "prereq2"] do
+file "name" => ["prereq1", "prereq2"] do
     Command
 end
 ```
 <p>와 같이 file task를 사용합니다. Command 부분에서 <code>name</code> 또는 dependency list (prereq1, prereq2, … )를 사용하고 싶을 때는</p>
 ```ruby
-file "name" = ["prereq1", "prereq2"] do |t|
+file "name" => ["prereq1", "prereq2"] do |t|
     sh "f77 -o #{t.name} #{t.prerequisites.join(' ')}"
 end
 ```
