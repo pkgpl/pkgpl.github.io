@@ -61,18 +61,18 @@ clean:
 ```ruby
 f90='gfortran'
 
-task :default =>; ['main.e']
-file 'main.e' =>; ['main.o','sub1.o','sub2.o'] do |t|
+task :default => ['main.e']
+file 'main.e' => ['main.o','sub1.o','sub2.o'] do |t|
     sh "#{f90} -o #{t.name} main.o sub1.o sub2.o"
 end
 
-file 'main.o' =>; ['main.f'] do
+file 'main.o' => ['main.f'] do
     sh "#{f90} -c main.f"
 end
-file 'sub1.o' =>; ['sub1.f'] do
+file 'sub1.o' => ['sub1.f'] do
     sh "#{f90} -c sub1.f"
 end
-file 'sub2.o' =>; ['sub2.f'] do
+file 'sub2.o' => ['sub2.f'] do
     sh "#{f90} -c sub2.f"
 end
 
@@ -113,11 +113,11 @@ TARGET='main.e'
 SRC=FileList['*.f']
 OBJ=SRC.ext('o')
 
-task :default =>; TARGET
-file TARGET =>; OBJ do
+task :default => TARGET
+file TARGET => OBJ do
     sh "#{F90} -o #{TARGET} #{OBJ}"
 end
-rule '.o' =>; '.f' do |t|
+rule '.o' => '.f' do |t|
     sh "#{F90} #{FFLAG} -c #{t.source}"
 end
 
