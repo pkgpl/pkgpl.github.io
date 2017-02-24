@@ -18,19 +18,19 @@ Target: Dependency list
 ```
 <p>였죠. Rakefile도 유사합니다. 단, Ruby syntax를 사용하죠. 기본적인 작성법은 다음과 같습니다.</p>
 ```ruby
-task :name = [:prereq1, :prereq2] do
+task :name => [:prereq1, :prereq2] do
     Command
 end
 ```
 <p>Makefile에서 Target에 해당하는 것이 Rakefile의 task입니다. 잘 살펴보면 task라는 함수명과 Hash, Block 두 개의 argument로 이루어진 구조라는 것을 알 수 있습니다. Hash의 key는 target이 되고 value는 prerequisites (dependency list)가 됩니다. Block은 실행해야 할 명령들로 이루어집니다. 특별히 compile하는 경우와 같이 파일을 작성하는 task의 경우에는</p>
 ```ruby
-file "name" = ["prereq1", "prereq2"] do
+file "name" => ["prereq1", "prereq2"] do
     Command
 end
 ```
 <p>와 같이 file task를 사용합니다. Command 부분에서 <code>name</code> 또는 dependency list (prereq1, prereq2, … )를 사용하고 싶을 때는</p>
 ```ruby
-file "name" = ["prereq1", "prereq2"] do |t|
+file "name" => ["prereq1", "prereq2"] do |t|
     sh "f77 -o #{t.name} #{t.prerequisites.join(' ')}"
 end
 ```
@@ -61,18 +61,18 @@ clean:
 ```ruby
 f90='gfortran'
 
-task :default =>; ['main.e']
-file 'main.e' =>; ['main.o','sub1.o','sub2.o'] do |t|
+task :default => ['main.e']
+file 'main.e' => ['main.o','sub1.o','sub2.o'] do |t|
     sh "#{f90} -o #{t.name} main.o sub1.o sub2.o"
 end
 
-file 'main.o' =>; ['main.f'] do
+file 'main.o' => ['main.f'] do
     sh "#{f90} -c main.f"
 end
-file 'sub1.o' =>; ['sub1.f'] do
+file 'sub1.o' => ['sub1.f'] do
     sh "#{f90} -c sub1.f"
 end
-file 'sub2.o' =>; ['sub2.f'] do
+file 'sub2.o' => ['sub2.f'] do
     sh "#{f90} -c sub2.f"
 end
 
@@ -113,11 +113,11 @@ TARGET='main.e'
 SRC=FileList['*.f']
 OBJ=SRC.ext('o')
 
-task :default =>; TARGET
-file TARGET =>; OBJ do
+task :default => TARGET
+file TARGET => OBJ do
     sh "#{F90} -o #{TARGET} #{OBJ}"
 end
-rule '.o' =>; '.f' do |t|
+rule '.o' => '.f' do |t|
     sh "#{F90} #{FFLAG} -c #{t.source}"
 end
 
