@@ -9,7 +9,7 @@ tags: fortran
 
 다음과 같은 configuration 파일에서 변수들을 읽어들일 수 있는 모듈입니다. 사용법은 [github](https://github.com/pkgpl/cfgio)에 올렸습니다.
 
-```fortran
+```ini
 [DEFAULTS]
 path = ../include
 use_abs = True

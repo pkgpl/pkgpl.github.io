@@ -13,6 +13,9 @@ nav-order: 17
 
 ## 공개 소프트웨어
 
+### 일반
+- [Fortran config parser]({% post_url 2017-02-27-Fortran-config-parser %}): configuration file parser for Fortran
+
 ### 자동화
 - [gpl library]({% post_url 2014-07-26-geophysical-prospecting-library %}): 작업 자동화 패키지
 
