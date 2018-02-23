@@ -9,6 +9,7 @@ status: publish
 categories: []
 tags: []
 nav-order: 17
+exclude: true
 ---
 
 ## 공개 소프트웨어
